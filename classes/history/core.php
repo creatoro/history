@@ -59,7 +59,7 @@ class History_Core {
 
 		if (self::$size > 0)
 		{
-            // Remove URLs from history that exceed the history size limit
+			// Remove URLs from history that exceed the history size limit
 			$history = array_slice($history, 0, self::$size);
 
 			// Save to session
@@ -67,7 +67,7 @@ class History_Core {
 
 			// Set history
 			$history = $history['url_history'];
-        }
+		}
 
 		// Return history
 		return $history;
