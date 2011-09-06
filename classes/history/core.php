@@ -22,8 +22,8 @@ class History_Core {
 	 * @uses    Request::detect_uri
 	 * @uses    Session::instance
 	 */
-    public static function push($current_url = NULL)
-    {
+	public static function push($current_url = NULL)
+	{
 		if ($current_url === NULL)
 		{
 			// Detect current URL
@@ -59,7 +59,7 @@ class History_Core {
 
 		if (self::$size > 0)
 		{
-            // Remove URLs from history that exceed the history size limit
+			// Remove URLs from history that exceed the history size limit
 			$history = array_slice($history, 0, self::$size);
 
 			// Save to session
@@ -67,13 +67,13 @@ class History_Core {
 
 			// Set history
 			$history = $history['url_history'];
-        }
+		}
 
 		// Return history
 		return $history;
-    }
+	}
 
-    /**
+	/**
 	 * Returns the full history.
 	 *
 	 * @static
@@ -81,11 +81,11 @@ class History_Core {
 	 * @uses    Session::instance
 	 */
 	public static function get()
-    {
-        return Session::instance()->get('url_history', array());
-    }
+	{
+		return Session::instance()->get('url_history', array());
+	}
 
-    /**
+	/**
 	 * Returns the last URL from history.
 	 *
 	 * @static
@@ -94,15 +94,15 @@ class History_Core {
 	 * @uses    Arr::get
 	 */
 	public static function last()
-    {
+	{
 		// Set history
-		 $history = Session::instance()->get('url_history', array());
+		$history = Session::instance()->get('url_history', array());
 
-        // Return the URL
-        return Arr::get($history, 1);
-    }
+		// Return the URL
+		return Arr::get($history, 1);
+	}
 
-    /**
+	/**
 	 * Deletes the history.
 	 *
 	 * @static
@@ -110,8 +110,8 @@ class History_Core {
 	 * @uses    Session::instance
 	 */
 	public static function clear()
-    {
+	{
 		Session::instance()->delete('url_history');
-    }
+	}
 
 } // End History_Core
