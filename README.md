@@ -1,6 +1,6 @@
 # History
 
-This module will provide a browser-safe history for Kohana, so you don't have to rely on the referer.
+This module will provide a browser-safe history for Kohana, so you don't have to rely on the referrer.
 
 ## Installation
 
@@ -13,7 +13,7 @@ Enable the module in your **bootstrap.php**:
 
 ## Configuration
 
-Set the desired history size in *MODPATH/history/classes/history/core.php*, using the $size variable.
+Set the desired history size in *MODPATH/history/classes/history/core.php*, using the `$size` variable.
 
 ## Usage
 
